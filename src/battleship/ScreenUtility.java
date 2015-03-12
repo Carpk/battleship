@@ -18,4 +18,10 @@ public class ScreenUtility {
     public static void successPrompt() {
         System.out.println("input was valid");
     }
+    
+    public static void displayBoard(char[][] board) {
+        for (int i=0; i < 9; i++){
+            System.out.println(board[i]);
+        }
+    }
 }

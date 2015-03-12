@@ -6,9 +6,11 @@ public class Battleship {
 
   public static void main (String[] args) {
     Scanner input = new Scanner(System.in);
+    GameBoard board = new GameBoard();
 
     while (GamePlay.gameOver() == false) {
       String userInput;
+      ScreenUtility.displayBoard(board.map);
       ScreenUtility.targetPrompt();
       userInput = input.next();
 
