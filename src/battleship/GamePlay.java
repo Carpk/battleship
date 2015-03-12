@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package battleship;
 
 
@@ -16,10 +12,12 @@ public class GamePlay {
     
     public void takeShot(String cords) {
         char[] letters = cords.toCharArray();
-        char letter = letters[0];
-        char num = letters[1];
+        
+        int letter = (int) letters[0] - 97;
+        int num = Character.getNumericValue(letters[1]) - 1;
+        System.out.println(letter);
         if (board.shotHitBoat(letter, num)) {
-            
+            board.assignHit(letter, num);
         } else {
             board.assignMiss(letter, num);
         }

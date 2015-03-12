@@ -1,4 +1,3 @@
-
 package battleship;
 
 public class GameBoard {
@@ -15,14 +14,17 @@ public class GameBoard {
         {'w','w','w','w','w','w','w','w','w'}
     };
     
-    public void assignMiss(char letter, char num) {
-      
-              
+    public void assignMiss(int letter, int num) {
+      map[letter][num] = 'o';  
+    }
+    
+    public void assignHit(int letter, int num) {
+        map[letter][num] = '#';
     }
 
-    public boolean shotHitBoat (char letter, char num) {
+    public boolean shotHitBoat (int letter, int num) {
 
-      if (map[3][6]=='w') {
+      if (map[letter][num]=='w') {
         return false;
       } else {
         return true;
