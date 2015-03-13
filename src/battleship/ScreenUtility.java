@@ -24,4 +24,12 @@ public class ScreenUtility {
             System.out.println(board[i]);
         }
     }
+    
+    public static void reportHit() {
+        System.out.println("You hit their ship");
+    }
+    
+    public static void reportMiss() {
+        System.out.println("You did not land a hit");
+    }
 }

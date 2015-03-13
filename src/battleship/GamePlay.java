@@ -12,14 +12,16 @@ public class GamePlay {
     
     public void takeShot(String cords) {
         char[] letters = cords.toCharArray();
-        
-        int letter = (int) letters[0] - 97;
-        int num = Character.getNumericValue(letters[1]) - 1;
-        System.out.println(letter);
-        if (board.shotHitBoat(letter, num)) {
-            board.assignHit(letter, num);
+
+        int cordY = (int) letters[0] - 97;
+        int cordX = Character.getNumericValue(letters[1]) - 1;
+
+        if (board.shotHitBoat(cordY, cordX)) {
+            ScreenUtility.reportHit();
+            board.assignHit(cordY, cordX);
         } else {
-            board.assignMiss(letter, num);
+            ScreenUtility.reportMiss();
+            board.assignMiss(cordY, cordX);
         }
     }
     

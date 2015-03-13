@@ -24,7 +24,7 @@ public class GameBoard {
 
     public boolean shotHitBoat (int letter, int num) {
 
-      if (map[letter][num]=='w') {
+      if (map[letter][num]=='w'|| map[letter][num]=='o') {
         return false;
       } else {
         return true;
