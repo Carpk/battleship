@@ -3,23 +3,17 @@ package battleship;
 
 public class Ship {
     
-    public int[][] position = new int[3][2];
+    public String[] position = new String[3];
     
     public void shipSetDown(int cordY, int cordX) {
-        position[0][0] = cordY;
-        position[0][1] = cordX;
-        position[1][0] = cordY+1;
-        position[1][1] = cordX;
-        position[2][0] = cordY+2;
-        position[2][1] = cordX;
+        for (int i=0; i<position.length; i++){
+            position[i] = Integer.toString(cordY + i) + Integer.toString(cordX);
+        }
     }
     
     public void shipSetRight(int cordY, int cordX) {
-        position[0][0] = cordY;
-        position[0][1] = cordX;
-        position[1][0] = cordY;
-        position[1][1] = cordX+1;
-        position[2][0] = cordY;
-        position[2][1] = cordX+2;
+        for (int i=0; i<position.length; i++){
+            position[i] = Integer.toString(cordY) + Integer.toString(cordX+i);
+        }
     }
 }
