@@ -5,6 +5,10 @@
 package battleship;
 
 public class ComputerAI {
+    GameBoard board = new GameBoard();
     
+    public void generatePositions() {
+        
+    }
     
 }
