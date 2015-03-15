@@ -8,13 +8,18 @@ public class Battleship {
     Scanner input = new Scanner(System.in);
     GamePlay game = new GamePlay();
 
+    game.setBoard();
     while (GamePlay.gameOver() == false) {
       String userInput;
       game.showMap();
       ScreenUtility.targetPrompt();
       userInput = input.next();
 
-      game.takeShot(userInput);
+      if (DataValidator.validInput(userInput)) {
+        game.attemptShot(userInput);
+      } else {
+          ScreenUtility.invalidData();
+      }
     }
   }
 

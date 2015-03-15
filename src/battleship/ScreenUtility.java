@@ -38,4 +38,8 @@ public class ScreenUtility {
     public static void reportMiss() {
         System.out.println("You did not land a hit");
     }
+    
+    public static void invalidData() {
+        System.out.println("Data is out of bounds");
+    }
 }
