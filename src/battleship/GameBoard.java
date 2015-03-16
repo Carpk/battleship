@@ -30,4 +30,12 @@ public class GameBoard {
         return true;
       }
     }
+    
+    public void setShipDownFrom(int y, int x) {
+        
+    }
+    
+    public void setShipRightFrom(int y, int x) {
+        
+    }
 }

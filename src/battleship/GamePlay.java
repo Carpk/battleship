@@ -4,16 +4,16 @@ package battleship;
 public class GamePlay {
     Player player = new Player();
     ComputerAI enemy = new ComputerAI();
-    
+
     public static boolean gameOver() {
         return false;
     }
-    
+
     public void setBoard() {
         enemy.generatePositions();
     }
-    
-    
+
+
     public void attemptShot(String cords) {
         char[] letters = cords.toCharArray();
 
@@ -28,10 +28,10 @@ public class GamePlay {
             player.assignMiss(cordY, cordX);
         }
     }
-    
+
     public void showMap() {
         // needs a pointer char[][] map = player.showMap();
         ScreenUtility.displayBoard(player.showMap());
     }
-    
+
 }
