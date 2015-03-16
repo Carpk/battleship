@@ -14,15 +14,15 @@ public class GameBoard {
         {'w','w','w','w','w','w','w','w','w'}
     };
     
-    public void assignMiss(int letter, int num) {
+    public void missAt(int letter, int num) {
       map[letter][num] = 'o';  
     }
     
-    public void assignHit(int letter, int num) {
+    public void hitAt(int letter, int num) {
         map[letter][num] = '#';
     }
 
-    public boolean shotHitBoat (int letter, int num) {
+    public boolean confirmHit(int letter, int num) {
 
       if (map[letter][num]=='w'|| map[letter][num]=='o') {
         return false;
@@ -32,10 +32,14 @@ public class GameBoard {
     }
     
     public void setShipDownFrom(int y, int x) {
-        
+        for (int i=0;i<3;i++) {
+        map[y + i][x] = '|';
+        }
     }
     
     public void setShipRightFrom(int y, int x) {
-        
+        for (int i=0;i<3;i++) {
+        map[y][x+i] = '-';
+        }
     }
 }

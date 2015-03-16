@@ -16,11 +16,11 @@ public class Player {
     }
     
     public void assignMiss(int y, int x) {
-        
+        board.missAt(y, x);
     }
     
     public void assignHit(int y, int x) {
-        
+        board.hitAt(y, x);
     }
     
 }
