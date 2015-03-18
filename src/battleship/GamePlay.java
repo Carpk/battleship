@@ -5,8 +5,12 @@ public class GamePlay {
     Player player = new Player();
     ComputerAI enemy = new ComputerAI();
 
-    public static boolean gameOver() {
-        return false;
+    public boolean gameOver() {
+        if(player.loserOfGame() || enemy.loserOfGame()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void setBoard() {
@@ -30,8 +34,8 @@ public class GamePlay {
     }
 
     public void showMap() {
-        // needs a pointer char[][] map = player.showMap();
-        ScreenUtility.displayBoard(player.showMap());
+        char[][] map = player.showMap();
+        ScreenUtility.displayBoard(map);
     }
 
 }

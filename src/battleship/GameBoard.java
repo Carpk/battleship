@@ -1,6 +1,7 @@
 package battleship;
 
 public class GameBoard {
+    Ship boat = new Ship();
 
     public char[][] map = {
         {'w','w','w','w','w','w','w','w','w'},
@@ -13,6 +14,14 @@ public class GameBoard {
         {'w','w','w','w','w','w','w','w','w'},
         {'w','w','w','w','w','w','w','w','w'}
     };
+    
+    public boolean allShipsSank() {
+        if (boat.destroyed()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     
     public void missAt(int letter, int num) {
       map[letter][num] = 'o';  

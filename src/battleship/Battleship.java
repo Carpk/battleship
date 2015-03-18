@@ -9,7 +9,7 @@ public class Battleship {
     GamePlay game = new GamePlay();
 
     game.setBoard();
-    while (GamePlay.gameOver() == false) {
+    while (game.gameOver() == false) {
       String userInput;
       game.showMap();
       ScreenUtility.targetPrompt();

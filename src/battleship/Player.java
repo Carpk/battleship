@@ -7,12 +7,16 @@ package battleship;
 public class Player {
     GameBoard board = new GameBoard();
     
+    public boolean loserOfGame() {
+        return board.allShipsSank();
+    }
+    
     public char[][] showMap() {
        return board.map;
     }
     
     public boolean successfulShot(int y, int x) {
-        return board.shotHitBoat(y, x);
+        return board.confirmHit(y, x);
     }
     
     public void assignMiss(int y, int x) {

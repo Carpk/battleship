@@ -1,11 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package battleship;
 
 public class ComputerAI {
     GameBoard board = new GameBoard();
+    
+    public boolean loserOfGame() {
+        return board.allShipsSank();
+    }
     
     public void generatePositions() {
         //can I simplify this?

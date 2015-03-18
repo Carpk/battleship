@@ -8,7 +8,10 @@ public class Ship {
     public void generatePosition() {
         
     }
-    
+
+    public boolean destroyed() {
+        return false;
+    }
     public void shipSetDown(int cordY, int cordX) {
         for (int i=0; i<position.length; i++){
             position[i] = Integer.toString(cordY + i) + Integer.toString(cordX);
