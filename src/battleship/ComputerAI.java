@@ -9,7 +9,6 @@ public class ComputerAI {
     }
     
     public void generatePositions() {
-        //can I simplify this?
         int y = board.map.length - 3;
         int x = board.map[0].length - 3;
         int randomY = 3; //(int) (Math.random() * y);

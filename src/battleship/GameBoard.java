@@ -28,6 +28,7 @@ public class GameBoard {
     }
     
     public void hitAt(int letter, int num) {
+        boat.takeHit();
         map[letter][num] = '#';
     }
 
