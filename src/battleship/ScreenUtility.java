@@ -20,15 +20,20 @@ public class ScreenUtility {
     }
     
     public static void displayBoard(char[][] board) {
-        for (int i=0; i < 10; i++) {
+    	System.out.print("  ");
+        for (int i=1; i < 10; i++) {
             System.out.print(i);
         }
         System.out.println();
         for (int i=0; i < 9; i++){
             char ch = (char) (i + 97);
-            System.out.print(ch);
+            System.out.print(ch + " ");
             System.out.println(board[i]);
         }
+    }
+    
+    public static void lineSpacer() {
+        System.out.println();
     }
     
     public static void reportHit() {

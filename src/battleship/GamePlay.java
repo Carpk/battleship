@@ -23,7 +23,8 @@ public class GamePlay {
 
         int cordY = (int) letters[0] - 97;
         int cordX = Character.getNumericValue(letters[1]) - 1;
-
+        
+        ScreenUtility.lineSpacer();
         if (enemy.successfulShot(cordY, cordX)) {
             ScreenUtility.reportHit();
             player.assignHit(cordY, cordX);

@@ -21,6 +21,7 @@ public class Battleship {
           ScreenUtility.invalidData();
       }
     }
+    input.close();
   }
 
 }
