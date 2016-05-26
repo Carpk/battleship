@@ -20,11 +20,16 @@ public class Player {
     }
     
     public void assignMiss(int y, int x) {
-        board.missAt(y, x);
+        board.assignMissAt(y, x);
     }
     
     public void assignHit(int y, int x) {
         board.hitAt(y, x);
     }
+
+	public boolean confirmIncomingDamage(int cordY, int cordX) {
+		// TODO Auto-generated method stub
+		return false;
+	}
     
 }

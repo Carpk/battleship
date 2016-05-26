@@ -23,17 +23,16 @@ public class GameBoard {
         }
     }
     
-    public void missAt(int letter, int num) {
+    public void assignMissAt(int letter, int num) {
       map[letter][num] = 'o';  
     }
     
     public void hitAt(int letter, int num) {
         boat.takeHit();
-        map[letter][num] = '#';
+        map[letter][num] = 'x';
     }
 
     public boolean confirmHit(int letter, int num) {
-
       if (map[letter][num]=='w'|| map[letter][num]=='o') {
         return false;
       } else {

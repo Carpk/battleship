@@ -20,6 +20,8 @@ public class Battleship {
       } else {
           ScreenUtility.invalidData();
       }
+      
+      game.enemyTakesTurn();
     }
     input.close();
   }

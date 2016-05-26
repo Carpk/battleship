@@ -39,6 +39,10 @@ public class ScreenUtility {
     public static void reportHit() {
         System.out.println("You hit their ship");
     }
+
+    public static void reportEnemyHit() {
+        System.out.println("The enemy has hit your ship!");
+    }
     
     public static void reportMiss() {
         System.out.println("You did not land a hit");
@@ -46,5 +50,13 @@ public class ScreenUtility {
     
     public static void invalidData() {
         System.out.println("Data is out of bounds");
+    }
+    
+    public static void notifyWin() {
+        System.out.println("You have defeated the enemy!");
+    }
+    
+    public static void notifyLoss() {
+        System.out.println("War is over, try again?");
     }
 }

@@ -25,16 +25,30 @@ public class GamePlay {
         int cordX = Character.getNumericValue(letters[1]) - 1;
         
         ScreenUtility.lineSpacer();
-        if (enemy.successfulShot(cordY, cordX)) {
+        if (enemy.confirmIncomingDamage(cordY, cordX)) {
             ScreenUtility.reportHit();
+            enemy.assignHit(cordY, cordX);
+        } else {
+            ScreenUtility.reportMiss();
+            enemy.assignMiss(cordY, cordX);
+        }
+    }
+    
+    public void enemyTakesTurn() {
+    	int cordY = (int) (Math.random() * 6);
+    	int cordX = (int) (Math.random() * 6);
+        if (player.confirmIncomingDamage(cordY, cordX)) {
+            ScreenUtility.reportEnemyHit();
             player.assignHit(cordY, cordX);
         } else {
             ScreenUtility.reportMiss();
             player.assignMiss(cordY, cordX);
-        }
+        } 	
     }
 
     public void showMap() {
+        char[][] enemyMap = enemy.showMap();
+        ScreenUtility.displayBoard(enemyMap);
         char[][] map = player.showMap();
         ScreenUtility.displayBoard(map);
     }
