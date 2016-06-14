@@ -59,4 +59,9 @@ public class ScreenUtility {
     public static void notifyLoss() {
         System.out.println("War is over, try again?");
     }
+
+	public static void reportEnemyMiss() {
+		System.out.println("Successfully evaded enemy fire!");
+		
+	}
 }

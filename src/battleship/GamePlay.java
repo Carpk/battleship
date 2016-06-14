@@ -41,7 +41,7 @@ public class GamePlay {
             ScreenUtility.reportEnemyHit();
             player.assignHit(cordY, cordX);
         } else {
-            ScreenUtility.reportMiss();
+            ScreenUtility.reportEnemyMiss();
             player.assignMiss(cordY, cordX);
         } 	
     }
